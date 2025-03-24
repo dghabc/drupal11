@@ -15,3 +15,17 @@ git add /home/dghabc/drupal11/.ddev/config.yaml -f
 
 ```
 
+# 安装radixdgh子模板
+
+```
+ddev drush --include="web/themes/contrib/radix" radix:create radixdgh
+ddev drush then radixdgh -y; ddev drush config-set system.theme default radixdgh -y
+cd web/themes/custom/radixdgh
+nvm use
+npm install
+cp .env.example .env.local
+//修改DRUPAL_BASE_URL=https://drupal11.ddev.site/
+ddev theme:watch radixdgh
+```
+
+#
