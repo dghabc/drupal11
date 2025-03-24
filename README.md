@@ -27,5 +27,8 @@ cp .env.example .env.local
 //修改DRUPAL_BASE_URL=https://drupal11.ddev.site/
 ddev theme:watch radixdgh
 ```
+修改navbar为黑色
+https://bootswatch.com/sandstone/
+这个配色
 
 #
