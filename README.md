@@ -30,5 +30,36 @@ ddev theme:watch radixdgh
 修改navbar为黑色
 https://bootswatch.com/sandstone/
 这个配色
+# nav设置
+```
+修改web/themes/custom/radixdgh/templates/form/form--search-block-form.html.twig
+{%
+  include "radix:form" with {
+    is_inline: false,
+    form_utility_classes: [
+      'd-inline-flex ',
+    ],
+  }
+%}
 
-#
+修改web/themes/custom/radixdgh/components/page-navigation/page-navigation.twig
+	{% block right %}
+		{% if page.navbar_right %}
+			<div class="ms-auto d-inline-flex">
+				{{ page.navbar_right }}
+			</div>
+		{% endif %}
+	{% endblock %}
+```
+
+# 设置paragraphs字段
+accordion item,有下面这2 个字段
+ Field name                Required   Field type   Cardinality
+ ------------------------- ---------- ------------ -------------
+  field_accordion_content   ✔          text_long    1
+  field_accordion_title     ✔          string       1
+在page类型下建立了accordion items（机器名field_accordion_items） 引用了这个字段
+
+我想建立 field--field-accordion-items.html.twig
+使用radix:accordion组件效果
+
