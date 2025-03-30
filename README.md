@@ -51,7 +51,8 @@ https://bootswatch.com/sandstone/
 		{% endif %}
 	{% endblock %}
 ```
-# 改变首页
+# 加入 icons功能
+
 启用bootstrap_layout_builder
 在Text formats and editors 中源代码中开启允许 <div class> <i class>
 设置 bootstrap-icons功能
