@@ -51,6 +51,20 @@ https://bootswatch.com/sandstone/
 		{% endif %}
 	{% endblock %}
 ```
+# 改变首页
+启用bootstrap_layout_builder
+在Text formats and editors 中源代码中开启允许 <div class> <i class>
+设置 bootstrap-icons功能
+ 复制字体文件web/themes/custom/radixdgh/src/assets/fonts
+复制scss文件 到web/themes/custom/radixdgh/src/scss下面
+加入/home/dghabc/drupal11/web/themes/custom/radixdgh/src/scss/main.style.scss
+```
+@import "base/_bootstrap-icons";
+修改这一行
+$bootstrap-icons-font-dir: "../fonts" !default;
+
+```
+
 
 # 设置paragraphs字段
 accordion item,有下面这2 个字段
